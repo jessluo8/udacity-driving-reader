@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -q -y \
     rm -rf /var/lib/apt/lists/*
 
 # Install Pip n Python modules
-RUN wget https://bootstrap.pypa.io/get-pip.py && \
+RUN wget https://bootstrap.pypa.io/pip/2.7/get-pip.py && \
     python get-pip.py && \
     rm get-pip.py \
     && pip install python numpy matplotlib ipykernel python-dateutil --upgrade \
